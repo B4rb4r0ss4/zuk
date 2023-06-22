@@ -6,8 +6,8 @@ const resultOutput = document.getElementById('res');
 button.addEventListener('click', () => {
   const minValue = parseInt(minInput.value);
   const maxValue = parseInt(maxInput.value);
-  if (Number.isNaN(minValue) || Number.isNaN(maxValue)) {
-    resultOutput.textContent = 'Niepoprawne dane';
+  if (Number.isNaN(minValue) || Number.isNaN(maxValue) || minValue > maxValue) {
+    resultOutput.textContent = 'Niepoprawne dane o kolonii';
     return;
   }
   const randomNumber = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
